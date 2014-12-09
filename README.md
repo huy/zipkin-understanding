@@ -28,7 +28,7 @@ The result is stored in e.g `zipkin-web/dist/zipkin-web.zip`
 
 ## Running
 
-### zipkin-collector
+### zipkin-collector-service
 
 create package distribution for `zipkin-collector-service`
 
@@ -38,9 +38,11 @@ run
 
     java -jar zipkin-collector-service-1.2.0-SNAPSHOT.jar -f config/collector-dev.scala
 
-the config file `config/collector-*.scala` specifies span database, for dev it is sqlite
+the config file `config/collector-*.scala` specifies span database, for dev it is sqlite. 
 
-### zipkin-query
+the collector service utilizes thrift frame transport so we need to use it when writting span feeder.
+
+### zipkin-query-service
 
 create package distribution for `zipkin-query-service`
 
@@ -50,7 +52,7 @@ run
 
     java -Xmx4G -Xss8M -jar zipkin-query-service-1.2.0-SNAPSHOT.jar -f config/collector-dev.scala
 
-the config file `config/query-*.scala` specifies span database, for dev it is sqlite. `zipkin-query` is memory hungry, the default java memory setting is not enough to make a decent test.
+The config file `config/query-*.scala` specifies span database, for dev it is sqlite. `zipkin-query` is memory hungry, the default java memory setting is not enough to make a decent test.
 
 When running make sure that `zipkin-collector` and `zipkin-query` access the same database
 

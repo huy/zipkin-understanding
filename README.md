@@ -24,11 +24,8 @@ The result is stored in e.g `zipkin-web/dist/zipkin-web.zip`
 
 Zipkin consists of three processes
 
-1. zipkin-collector
-2. zipkin-query
-3. zipkin-web
+1. zipkin-collector: thrift server listening on port 9410. It receives and persists span data to span database
+2. zipkin-query: thrift server listening on port 9411. It accesses span database to answer query from zipkin-web
+3. zipkin-web: web server that provides UI interface on port 8080. It connect to zipkin-query to retrieve span data
 
-zipkin-collector is thrift server listening on port 9410. It receives and persists span data to span database
-zipkin-query is thrift server listening on port 9411. It accesses span database to answer query from zipkin-web
-zipkin-web is web server that provides UI interface on port 8080. It connect to zipkin-query to retrieve span data
 

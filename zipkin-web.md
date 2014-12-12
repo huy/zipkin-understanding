@@ -23,3 +23,4 @@ Javascript frontend is designed as single page application and utilizes various 
 * flightjs - https://github.com/flightjs/flight: is used to bind event handler to DOM object
 * bootstrap - https://github.com/twbs/bootstrap: provides CSS based template/components for UI responsive design
 
+`templates/v2/layout.mustache` is the template for all pages. It loads bundle of css and js files required for display and control UI elements of each page.

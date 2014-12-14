@@ -58,6 +58,8 @@ When running make sure that `zipkin-collector` and `zipkin-query` access the sam
 
 ### zipkin-web
 
+detail is in [zipkin-web](zipkin-web.md)
+
 create package distribution for `zipkin-web`
 
 unzip the `zipkin-web/dist/zipkin-web.zip`
@@ -67,4 +69,5 @@ run
     java -Xmx4G -jar zipkin-web-1.2.0-SNAPSHOT.jar -zipkin.web.resourcesRoot=/home/zipkin/deploy/resources
 
 We need to specify `-zipkin.web.resourcesRoot` to point to correct folder containing web static assets
+
 

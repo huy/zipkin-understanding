@@ -58,8 +58,6 @@ When running make sure that `zipkin-collector` and `zipkin-query` access the sam
 
 ### zipkin-web
 
-detail is in [zipkin-web](zipkin-web.md)
-
 create package distribution for `zipkin-web`
 
 unzip the `zipkin-web/dist/zipkin-web.zip`
@@ -70,4 +68,5 @@ run
 
 We need to specify `-zipkin.web.resourcesRoot` to point to correct folder containing web static assets
 
+See [zipkin-web](zipkin-web.md)
 

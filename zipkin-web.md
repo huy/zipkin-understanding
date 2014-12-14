@@ -23,6 +23,32 @@ Javascript frontend is designed as single page application and utilizes various 
 * flightjs - https://github.com/flightjs/flight: is used to bind event handler to DOM object
 * bootstrap - https://github.com/twbs/bootstrap: provides CSS based template/components for UI responsive design
 
+Any pages use layout `templates/v2/layout.mustache`
+
+    <script src='/app/libs/jquery/jquery.min.js'></script>
+    <script src='/app/libs/jquery-timeago/jquery.timeago.js'></script>
+    <script src='/app/libs/chosen/chosen.jquery.min.js'></script>
+    <script src='/app/libs/jquery-cookie/jquery.cookie.js'></script>
+    <script src='/app/libs/bootstrap-datepicker/js/bootstrap-datepicker.js'></script>
+    <script src="/app/libs/momentjs/min/moment.min.js"></script>
+
+    <script src='/app/libs/bootstrap/js/bootstrap.min.js'></script>
+    <script src='/app/libs/requirejs/require.js' data-main='/app/js/main.js'></script>
+
+The main entry point for the `flightjs` application is managed by `requirejs` in `app/js/main.js`
+
+    require(
+      [
+        'flight/lib/compose',
+        'flight/lib/registry',
+        'flight/lib/advice',
+        'flight/lib/logger',
+        'flight/lib/debug'
+      ],
+    
+      function(compose, registry, advice, withLogging, debug) {
+
+
 ## Example of request
 
 The http request `/trace/3` goes to the server, then it is routed according to `web/Main.scala`

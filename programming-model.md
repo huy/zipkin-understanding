@@ -8,7 +8,7 @@ Zipkin is based on twitter finagle runtime library. Finagle's foundation is non 
 
 **Future**
 
-Future is abstract class that represent result of an asynchronous operation (we can synomymize it as an operation or step of workflow). 
+Future is abstract class that represent result of an asynchronous operation (we can synomymize it as a step of a workflow). 
 
 There are range of Future's combinators defined to express different sematic of computation's workflow that are beyond sequential computation available implictily in most traditional programming languages. 
 
